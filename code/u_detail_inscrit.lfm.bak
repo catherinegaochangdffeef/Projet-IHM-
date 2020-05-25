@@ -1,0 +1,425 @@
+object f_detail_inscrit: Tf_detail_inscrit
+  Left = 326
+  Height = 722
+  Top = 87
+  Width = 920
+  Caption = 'f_detail_inscrit'
+  ClientHeight = 722
+  ClientWidth = 920
+  ParentFont = True
+  LCLVersion = '1.6.0.4'
+  object pnl_titre: TPanel
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 920
+    Align = alTop
+    TabOrder = 0
+  end
+  object pnl_btn: TPanel
+    Left = 0
+    Height = 50
+    Top = 672
+    Width = 920
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 920
+    TabOrder = 1
+    object btn_valider: TButton
+      Left = 720
+      Height = 25
+      Top = 16
+      Width = 88
+      Caption = 'Valider'
+      TabOrder = 0
+    end
+    object btn_annuler: TButton
+      Left = 824
+      Height = 25
+      Top = 16
+      Width = 83
+      Caption = 'Annuler'
+      OnClick = btn_annulerClick
+      TabOrder = 1
+    end
+    object btn_retour: TButton
+      Left = 824
+      Height = 25
+      Top = 16
+      Width = 83
+      Caption = 'Retour'
+      OnClick = btn_retourClick
+      TabOrder = 2
+    end
+  end
+  object pnl_detail: TPanel
+    Left = 0
+    Height = 646
+    Top = 26
+    Width = 920
+    Align = alClient
+    ClientHeight = 646
+    ClientWidth = 920
+    TabOrder = 2
+    object pnl_ident: TPanel
+      Left = 1
+      Height = 87
+      Top = 1
+      Width = 918
+      Align = alTop
+      ClientHeight = 87
+      ClientWidth = 918
+      TabOrder = 0
+      object lbl_ident: TLabel
+        Left = 8
+        Height = 15
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = 'IDENTIFICATION'
+        ParentColor = False
+      end
+      object lbl_num: TLabel
+        Left = 56
+        Height = 15
+        Top = 24
+        Width = 42
+        Caption = 'numéro'
+        ParentColor = False
+      end
+      object lbl_nom: TLabel
+        Left = 272
+        Height = 15
+        Top = 16
+        Width = 25
+        Caption = 'nom'
+        ParentColor = False
+      end
+      object lbl_prenom: TLabel
+        Left = 592
+        Height = 15
+        Top = 16
+        Width = 42
+        Caption = 'prénom'
+        ParentColor = False
+      end
+      object cbx_civ: TComboBox
+        Left = 172
+        Height = 23
+        Top = 40
+        Width = 68
+        DropDownCount = 2
+        ItemHeight = 15
+        Items.Strings = (
+          'M'
+          'Mme'
+        )
+        TabOrder = 0
+      end
+      object edt_num: TEdit
+        Left = 56
+        Height = 23
+        Top = 40
+        Width = 80
+        OnEnter = edt_Enter
+        OnExit = edt_numExit
+        TabOrder = 1
+      end
+      object edt_nom: TEdit
+        Left = 272
+        Height = 23
+        Top = 40
+        Width = 264
+        OnEnter = edt_Enter
+        OnExit = edt_nomExit
+        TabOrder = 2
+      end
+      object edt_prenom: TEdit
+        Left = 592
+        Height = 23
+        Top = 40
+        Width = 280
+        OnEnter = edt_Enter
+        OnExit = edt_prenomExit
+        TabOrder = 3
+      end
+      object lbl_num_erreur: TLabel
+        Left = 56
+        Height = 15
+        Top = 64
+        Width = 79
+        Caption = 'lbl_num_erreur'
+        ParentColor = False
+      end
+      object lbl_nom_erreur: TLabel
+        Left = 272
+        Height = 15
+        Top = 64
+        Width = 79
+        Caption = 'lbl_nom_erreur'
+        ParentColor = False
+      end
+      object lbl_prenom_erreur: TLabel
+        Left = 592
+        Height = 15
+        Top = 64
+        Width = 96
+        Caption = 'lbl_prenom_erreur'
+        ParentColor = False
+      end
+    end
+    object pnl_adresse: TPanel
+      Left = 1
+      Height = 106
+      Top = 88
+      Width = 918
+      Align = alTop
+      ClientHeight = 106
+      ClientWidth = 918
+      TabOrder = 1
+      object lbl_adresse: TLabel
+        Left = 8
+        Height = 15
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = 'ADRESSE'
+        ParentColor = False
+      end
+      object edt_adresse: TEdit
+        Left = 56
+        Height = 23
+        Top = 16
+        Width = 592
+        OnEnter = edt_Enter
+        OnExit = edt_adresseExit
+        TabOrder = 0
+      end
+      object edt_cp: TEdit
+        Left = 56
+        Height = 23
+        Top = 64
+        Width = 80
+        OnEnter = edt_Enter
+        OnExit = edt_cpExit
+        TabOrder = 1
+      end
+      object edt_ville: TEdit
+        Left = 272
+        Height = 23
+        Top = 64
+        Width = 376
+        OnEnter = edt_Enter
+        OnExit = edt_villeExit
+        TabOrder = 2
+      end
+      object lbl_adresse_erreur: TLabel
+        Left = 56
+        Height = 15
+        Top = 40
+        Width = 93
+        Caption = 'lbl_adresse_erreur'
+        ParentColor = False
+      end
+      object lbl_ville_erreur: TLabel
+        Left = 272
+        Height = 15
+        Top = 88
+        Width = 75
+        Caption = 'lbl_ville_erreur'
+        ParentColor = False
+      end
+      object lbl_cp_erreur: TLabel
+        Left = 56
+        Height = 15
+        Top = 88
+        Width = 67
+        Caption = 'lbl_cp_erreur'
+        ParentColor = False
+      end
+    end
+    object pnl_contact: TPanel
+      Left = 1
+      Height = 86
+      Top = 194
+      Width = 918
+      Align = alTop
+      ClientHeight = 86
+      ClientWidth = 918
+      TabOrder = 2
+      object lbl_contact: TLabel
+        Left = 8
+        Height = 15
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = 'CONTACT'
+        ParentColor = False
+      end
+      object lbl_telephone: TLabel
+        Left = 56
+        Height = 15
+        Top = 24
+        Width = 53
+        Caption = 'téléphone'
+        ParentColor = False
+      end
+      object lbl_portable: TLabel
+        Left = 272
+        Height = 15
+        Top = 24
+        Width = 44
+        Caption = 'portable'
+        ParentColor = False
+      end
+      object lbl_mel: TLabel
+        Left = 536
+        Height = 15
+        Top = 24
+        Width = 20
+        Caption = 'mel'
+        ParentColor = False
+      end
+      object edt_telephone: TEdit
+        Left = 56
+        Height = 23
+        Top = 40
+        Width = 184
+        OnEnter = edt_Enter
+        OnExit = edt_telephoneExit
+        TabOrder = 0
+      end
+      object edt_portable: TEdit
+        Left = 271
+        Height = 23
+        Top = 40
+        Width = 233
+        OnEnter = edt_Enter
+        OnExit = edt_portableExit
+        TabOrder = 1
+      end
+      object edt_mel: TEdit
+        Left = 536
+        Height = 23
+        Top = 40
+        Width = 344
+        OnEnter = edt_Enter
+        OnExit = edt_melExit
+        TabOrder = 2
+      end
+      object lbl_telephone_erreur: TLabel
+        Left = 56
+        Height = 15
+        Top = 64
+        Width = 107
+        Caption = 'lbl_telephone_erreur'
+        ParentColor = False
+      end
+      object lbl_mel_erreur: TLabel
+        Left = 536
+        Height = 15
+        Top = 64
+        Width = 74
+        Caption = 'lbl_mel_erreur'
+        ParentColor = False
+      end
+    end
+    object pnl_filiere: TPanel
+      Left = 1
+      Height = 82
+      Top = 280
+      Width = 918
+      Align = alTop
+      ClientHeight = 82
+      ClientWidth = 918
+      TabOrder = 3
+      object lbl_filiere: TLabel
+        Left = 8
+        Height = 15
+        Top = 0
+        Width = 140
+        AutoSize = False
+        Caption = 'FILIERE'
+        ParentColor = False
+      end
+      object lbl_filiere_erreur: TLabel
+        Left = 56
+        Height = 15
+        Top = 56
+        Width = 83
+        Caption = 'lbl_filiere_erreur'
+        ParentColor = False
+      end
+      object lbl_filiere_court: TLabel
+        Left = 324
+        Height = 15
+        Top = 24
+        Width = 80
+        Caption = 'lbl_filiere_court'
+        ParentColor = False
+      end
+      object lbl_filiere_long: TLabel
+        Left = 324
+        Height = 15
+        Top = 56
+        Width = 76
+        Caption = 'lbl_filiere_long'
+        ParentColor = False
+      end
+      object cbx_filiere: TComboBox
+        Left = 56
+        Height = 23
+        Top = 24
+        Width = 184
+        ItemHeight = 15
+        Sorted = True
+        TabOrder = 0
+      end
+    end
+    object pnl_releve: TPanel
+      Left = 1
+      Height = 283
+      Top = 362
+      Width = 918
+      Align = alClient
+      ClientHeight = 283
+      ClientWidth = 918
+      TabOrder = 4
+      object pnl_releve_list: TPanel
+        Left = 1
+        Height = 258
+        Top = 24
+        Width = 500
+        Align = alLeft
+        TabOrder = 0
+      end
+      object pnl_releve_titre: TPanel
+        Left = 1
+        Height = 23
+        Top = 1
+        Width = 916
+        Align = alTop
+        ClientHeight = 23
+        ClientWidth = 916
+        TabOrder = 1
+        object lbl_releve: TLabel
+          Left = 8
+          Height = 15
+          Top = 0
+          Width = 140
+          AutoSize = False
+          Caption = 'Relevé de notes'
+          ParentColor = False
+        end
+        object lbl_moyennes: TLabel
+          Left = 272
+          Height = 15
+          Top = 0
+          Width = 73
+          Caption = 'lbl_moyennes'
+          ParentColor = False
+        end
+      end
+    end
+  end
+end

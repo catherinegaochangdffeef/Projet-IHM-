@@ -1,0 +1,84 @@
+inherited f_list_inscrit: Tf_list_inscrit
+  Left = 569
+  Height = 720
+  Top = 205
+  Width = 920
+  Caption = 'f_list_inscrit'
+  ClientHeight = 720
+  ClientWidth = 920
+  inherited pnl_titre: TPanel
+    Width = 920
+  end
+  inherited pnl_btn: TPanel
+    Top = 686
+    Width = 920
+    ClientWidth = 920
+    inherited pnl_btn_ligne: TPanel
+      Width = 521
+      ClientWidth = 521
+      inherited btn_line_detail: TSpeedButton
+        Left = 359
+        OnClick = btn_line_detailClick
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 400
+        OnClick = btn_line_addClick
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 439
+        OnClick = btn_line_deleteClick
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 481
+        OnClick = btn_line_editClick
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 652
+    Width = 920
+    ClientHeight = 652
+    ClientWidth = 920
+    inherited sg_liste: TStringGrid
+      Height = 652
+      Width = 920
+      ColCount = 5
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'n°'
+          Width = 80
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Civ'
+          Width = 50
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Identité'
+          Width = 250
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Commune du domicile'
+          Width = 270
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Filière'
+          Width = 270
+        end>
+      ColWidths = (
+        80
+        50
+        250
+        270
+        270
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end
