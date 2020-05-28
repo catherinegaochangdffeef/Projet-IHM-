@@ -1,21 +1,21 @@
 inherited f_releve_list: Tf_releve_list
-  Left = 228
-  Height = 275
-  Top = 272
-  Width = 427
+  Left = 243
+  Height = 358
+  Top = 578
+  Width = 476
   Caption = 'f_releve_list'
-  ClientHeight = 275
-  ClientWidth = 427
+  ClientHeight = 358
+  ClientWidth = 476
   inherited pnl_titre: TPanel
-    Width = 427
+    Width = 476
   end
   inherited pnl_btn: TPanel
-    Top = 241
-    Width = 427
-    ClientWidth = 427
+    Top = 324
+    Width = 476
+    ClientWidth = 476
     inherited pnl_btn_ligne: TPanel
-      Width = 28
-      ClientWidth = 28
+      Width = 77
+      ClientWidth = 77
       inherited btn_line_detail: TSpeedButton
         Left = -41
       end
@@ -23,21 +23,21 @@ inherited f_releve_list: Tf_releve_list
         Left = -39
       end
       inherited btn_line_delete: TSpeedButton
-        Left = -42
+        Left = -5
       end
       inherited btn_line_edit: TSpeedButton
-        Left = -12
+        Left = 37
       end
     end
   end
   inherited pnl_affi: TPanel
-    Height = 207
-    Width = 427
-    ClientHeight = 207
-    ClientWidth = 427
+    Height = 290
+    Width = 476
+    ClientHeight = 290
+    ClientWidth = 476
     inherited sg_liste: TStringGrid
-      Height = 207
-      Width = 427
+      Height = 290
+      Width = 476
       ColCount = 3
       Columns = <      
         item

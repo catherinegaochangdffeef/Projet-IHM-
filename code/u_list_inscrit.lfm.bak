@@ -1,7 +1,7 @@
 inherited f_list_inscrit: Tf_list_inscrit
-  Left = 569
+  Left = 548
   Height = 720
-  Top = 205
+  Top = 328
   Width = 920
   Caption = 'f_list_inscrit'
   ClientHeight = 720
@@ -61,7 +61,7 @@ inherited f_list_inscrit: Tf_list_inscrit
         end      
         item
           PickList.Strings = (          )
-          Title.Caption = 'Commune Domicile'
+          Title.Caption = 'Commune du domicile'
           Width = 270
         end      
         item

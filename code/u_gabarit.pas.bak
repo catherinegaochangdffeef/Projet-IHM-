@@ -92,6 +92,7 @@ begin
    style.panel_defaut    (pnl_info);
    f_gabarit.width := 1200;
    f_gabarit.height :=  800;
+   pnl_ariane.caption:= ' >' + item_accueil.caption
 end;
 
 

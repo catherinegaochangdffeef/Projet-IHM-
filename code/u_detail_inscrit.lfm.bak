@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 326
+  Left = 695
   Height = 722
-  Top = 87
+  Top = 306
   Width = 920
   Caption = 'f_detail_inscrit'
   ClientHeight = 722
@@ -81,35 +81,35 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object lbl_num: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 24
-        Width = 42
+        Width = 57
         Caption = 'numéro'
         ParentColor = False
       end
       object lbl_nom: TLabel
         Left = 272
-        Height = 15
+        Height = 20
         Top = 16
-        Width = 25
+        Width = 33
         Caption = 'nom'
         ParentColor = False
       end
       object lbl_prenom: TLabel
         Left = 592
-        Height = 15
+        Height = 20
         Top = 16
-        Width = 42
+        Width = 58
         Caption = 'prénom'
         ParentColor = False
       end
       object cbx_civ: TComboBox
         Left = 172
-        Height = 23
+        Height = 28
         Top = 40
         Width = 68
         DropDownCount = 2
-        ItemHeight = 15
+        ItemHeight = 20
         Items.Strings = (
           'M'
           'Mme'
@@ -118,7 +118,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_num: TEdit
         Left = 56
-        Height = 23
+        Height = 28
         Top = 40
         Width = 80
         OnEnter = edt_Enter
@@ -127,7 +127,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_nom: TEdit
         Left = 272
-        Height = 23
+        Height = 28
         Top = 40
         Width = 264
         OnEnter = edt_Enter
@@ -136,7 +136,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_prenom: TEdit
         Left = 592
-        Height = 23
+        Height = 28
         Top = 40
         Width = 280
         OnEnter = edt_Enter
@@ -145,25 +145,25 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object lbl_num_erreur: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 64
-        Width = 79
+        Width = 109
         Caption = 'lbl_num_erreur'
         ParentColor = False
       end
       object lbl_nom_erreur: TLabel
         Left = 272
-        Height = 15
+        Height = 20
         Top = 64
-        Width = 79
+        Width = 110
         Caption = 'lbl_nom_erreur'
         ParentColor = False
       end
       object lbl_prenom_erreur: TLabel
         Left = 592
-        Height = 15
+        Height = 20
         Top = 64
-        Width = 96
+        Width = 135
         Caption = 'lbl_prenom_erreur'
         ParentColor = False
       end
@@ -188,7 +188,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_adresse: TEdit
         Left = 56
-        Height = 23
+        Height = 28
         Top = 16
         Width = 592
         OnEnter = edt_Enter
@@ -197,7 +197,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_cp: TEdit
         Left = 56
-        Height = 23
+        Height = 28
         Top = 64
         Width = 80
         OnEnter = edt_Enter
@@ -206,7 +206,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_ville: TEdit
         Left = 272
-        Height = 23
+        Height = 28
         Top = 64
         Width = 376
         OnEnter = edt_Enter
@@ -215,25 +215,25 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object lbl_adresse_erreur: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 40
-        Width = 93
+        Width = 133
         Caption = 'lbl_adresse_erreur'
         ParentColor = False
       end
       object lbl_ville_erreur: TLabel
         Left = 272
-        Height = 15
+        Height = 20
         Top = 88
-        Width = 75
+        Width = 106
         Caption = 'lbl_ville_erreur'
         ParentColor = False
       end
       object lbl_cp_erreur: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 88
-        Width = 67
+        Width = 95
         Caption = 'lbl_cp_erreur'
         ParentColor = False
       end
@@ -258,31 +258,31 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object lbl_telephone: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 24
-        Width = 53
+        Width = 75
         Caption = 'téléphone'
         ParentColor = False
       end
       object lbl_portable: TLabel
         Left = 272
-        Height = 15
+        Height = 20
         Top = 24
-        Width = 44
+        Width = 63
         Caption = 'portable'
         ParentColor = False
       end
       object lbl_mel: TLabel
         Left = 536
-        Height = 15
+        Height = 20
         Top = 24
-        Width = 20
+        Width = 27
         Caption = 'mel'
         ParentColor = False
       end
       object edt_telephone: TEdit
         Left = 56
-        Height = 23
+        Height = 28
         Top = 40
         Width = 184
         OnEnter = edt_Enter
@@ -291,7 +291,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_portable: TEdit
         Left = 271
-        Height = 23
+        Height = 28
         Top = 40
         Width = 233
         OnEnter = edt_Enter
@@ -300,7 +300,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object edt_mel: TEdit
         Left = 536
-        Height = 23
+        Height = 28
         Top = 40
         Width = 344
         OnEnter = edt_Enter
@@ -309,17 +309,17 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object lbl_telephone_erreur: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 64
-        Width = 107
+        Width = 152
         Caption = 'lbl_telephone_erreur'
         ParentColor = False
       end
       object lbl_mel_erreur: TLabel
         Left = 536
-        Height = 15
+        Height = 20
         Top = 64
-        Width = 74
+        Width = 104
         Caption = 'lbl_mel_erreur'
         ParentColor = False
       end
@@ -344,34 +344,34 @@ object f_detail_inscrit: Tf_detail_inscrit
       end
       object lbl_filiere_erreur: TLabel
         Left = 56
-        Height = 15
+        Height = 20
         Top = 56
-        Width = 83
+        Width = 118
         Caption = 'lbl_filiere_erreur'
         ParentColor = False
       end
       object lbl_filiere_court: TLabel
         Left = 324
-        Height = 15
+        Height = 20
         Top = 24
-        Width = 80
+        Width = 112
         Caption = 'lbl_filiere_court'
         ParentColor = False
       end
       object lbl_filiere_long: TLabel
         Left = 324
-        Height = 15
+        Height = 20
         Top = 56
-        Width = 76
+        Width = 106
         Caption = 'lbl_filiere_long'
         ParentColor = False
       end
       object cbx_filiere: TComboBox
         Left = 56
-        Height = 23
+        Height = 28
         Top = 24
         Width = 184
-        ItemHeight = 15
+        ItemHeight = 20
         Sorted = True
         TabOrder = 0
       end
@@ -413,9 +413,9 @@ object f_detail_inscrit: Tf_detail_inscrit
         end
         object lbl_moyennes: TLabel
           Left = 272
-          Height = 15
+          Height = 20
           Top = 0
-          Width = 73
+          Width = 100
           Caption = 'lbl_moyennes'
           ParentColor = False
         end
