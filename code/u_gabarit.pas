@@ -5,7 +5,8 @@ unit u_gabarit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
+  StdCtrls;
 
 type
 
@@ -22,6 +23,7 @@ type
     item_statistiques: TMenuItem;
     item_archive_n2: TMenuItem;
     item_archive_n1: TMenuItem;
+    Label1: TLabel;
     mnu_main: TMainMenu;
     pnl_ariane: TPanel;
     pnl_selection: TPanel;
@@ -100,6 +102,7 @@ procedure Tf_gabarit.item_quitterClick(Sender: TObject);
 begin
    close;
 end;
+
 
 
 end.

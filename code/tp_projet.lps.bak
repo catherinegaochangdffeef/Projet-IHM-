@@ -8,7 +8,7 @@
       <Unit0>
         <Filename Value="tp_projet.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="57"/>
       </Unit0>
       <Unit1>
         <Filename Value="u_gabarit.pas"/>
@@ -16,9 +16,10 @@
         <ComponentName Value="f_gabarit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="65"/>
         <CursorPos X="27" Y="96"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -31,7 +32,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="63"/>
         <CursorPos X="21" Y="63"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -40,10 +41,9 @@
         <ComponentName Value="f_list_inscrit"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="45" Y="56"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -54,9 +54,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="222"/>
-        <CursorPos Y="67"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="221"/>
+        <CursorPos X="32" Y="232"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -69,7 +69,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="14"/>
         <CursorPos X="20" Y="37"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>

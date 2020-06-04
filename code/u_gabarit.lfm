@@ -1,7 +1,7 @@
 object f_gabarit: Tf_gabarit
-  Left = 542
+  Left = 515
   Height = 800
-  Top = 242
+  Top = 208
   Width = 1200
   Caption = 'Gestion des inscriptions'
   ClientHeight = 775
@@ -1794,6 +1794,8 @@ object f_gabarit: Tf_gabarit
     Top = 30
     Width = 920
     Align = alRight
+    ClientHeight = 715
+    ClientWidth = 920
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -16
@@ -1803,6 +1805,29 @@ object f_gabarit: Tf_gabarit
     ParentColor = False
     ParentFont = False
     TabOrder = 3
+    object Label1: TLabel
+      Left = 31
+      Height = 653
+      Top = 31
+      Width = 858
+      Align = alClient
+      Alignment = taCenter
+      BidiMode = bdRightToLeftReadingOnly
+      BorderSpacing.Around = 30
+      Caption = #13#10#13#10#13#10#13#10'           Bienvenue'#13#10#13#10'dans l''application de'#13#10#13#10'gestion de la Scolarité'
+      Color = clDefault
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -43
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentBidiMode = False
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
   end
   object mnu_main: TMainMenu
     left = 144

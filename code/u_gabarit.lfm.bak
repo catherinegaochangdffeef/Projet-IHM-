@@ -1,11 +1,11 @@
 object f_gabarit: Tf_gabarit
-  Left = 566
+  Left = 515
   Height = 800
-  Top = 140
+  Top = 208
   Width = 1200
   Caption = 'Gestion des inscriptions'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 775
+  ClientWidth = 1200
   Color = 15461355
   Font.CharSet = ANSI_CHARSET
   Font.Height = -16
@@ -1746,7 +1746,7 @@ object f_gabarit: Tf_gabarit
     Left = 0
     Height = 30
     Top = 0
-    Width = 0
+    Width = 1200
     Align = alTop
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
@@ -1760,9 +1760,9 @@ object f_gabarit: Tf_gabarit
   end
   object pnl_selection: TPanel
     Left = 0
-    Height = 0
-    Top = 0
-    Width = 0
+    Height = 715
+    Top = 30
+    Width = 280
     Align = alClient
     Color = 15461355
     Font.CharSet = ANSI_CHARSET
@@ -1777,8 +1777,8 @@ object f_gabarit: Tf_gabarit
   object pnl_info: TPanel
     Left = 0
     Height = 30
-    Top = -30
-    Width = 0
+    Top = 745
+    Width = 1200
     Align = alBottom
     Font.CharSet = ANSI_CHARSET
     Font.Height = -16
@@ -1789,11 +1789,13 @@ object f_gabarit: Tf_gabarit
     TabOrder = 2
   end
   object pnl_travail: TPanel
-    Left = -920
-    Height = 0
-    Top = 0
+    Left = 280
+    Height = 715
+    Top = 30
     Width = 920
     Align = alRight
+    ClientHeight = 715
+    ClientWidth = 920
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -16
@@ -1803,6 +1805,29 @@ object f_gabarit: Tf_gabarit
     ParentColor = False
     ParentFont = False
     TabOrder = 3
+    object Label1: TLabel
+      Left = 31
+      Height = 653
+      Top = 31
+      Width = 858
+      Align = alClient
+      Alignment = taCenter
+      BidiMode = bdRightToLeftReadingOnly
+      BorderSpacing.Around = 30
+      Caption = #13#10#13#10#13#10#13#10'           Bienvenue'#13#10#13#10'dans l''application de'#13#10#13#10'gestion de la Scolarité'
+      Color = clDefault
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -43
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentBidiMode = False
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
   end
   object mnu_main: TMainMenu
     left = 144
