@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 695
+  Left = 522
   Height = 722
-  Top = 306
+  Top = 266
   Width = 920
   Caption = 'f_detail_inscrit'
   ClientHeight = 722

@@ -1,11 +1,11 @@
 object f_gabarit: Tf_gabarit
-  Left = 566
+  Left = 542
   Height = 800
-  Top = 140
+  Top = 242
   Width = 1200
   Caption = 'Gestion des inscriptions'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 775
+  ClientWidth = 1200
   Color = 15461355
   Font.CharSet = ANSI_CHARSET
   Font.Height = -16
@@ -1746,7 +1746,7 @@ object f_gabarit: Tf_gabarit
     Left = 0
     Height = 30
     Top = 0
-    Width = 0
+    Width = 1200
     Align = alTop
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
@@ -1760,9 +1760,9 @@ object f_gabarit: Tf_gabarit
   end
   object pnl_selection: TPanel
     Left = 0
-    Height = 0
-    Top = 0
-    Width = 0
+    Height = 715
+    Top = 30
+    Width = 280
     Align = alClient
     Color = 15461355
     Font.CharSet = ANSI_CHARSET
@@ -1777,8 +1777,8 @@ object f_gabarit: Tf_gabarit
   object pnl_info: TPanel
     Left = 0
     Height = 30
-    Top = -30
-    Width = 0
+    Top = 745
+    Width = 1200
     Align = alBottom
     Font.CharSet = ANSI_CHARSET
     Font.Height = -16
@@ -1789,9 +1789,9 @@ object f_gabarit: Tf_gabarit
     TabOrder = 2
   end
   object pnl_travail: TPanel
-    Left = -920
-    Height = 0
-    Top = 0
+    Left = 280
+    Height = 715
+    Top = 30
     Width = 920
     Align = alRight
     Font.CharSet = ANSI_CHARSET

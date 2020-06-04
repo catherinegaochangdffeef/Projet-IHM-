@@ -1,7 +1,7 @@
 inherited f_list_inscrit: Tf_list_inscrit
-  Left = 548
+  Left = 34
   Height = 720
-  Top = 328
+  Top = 192
   Width = 920
   Caption = 'f_list_inscrit'
   ClientHeight = 720

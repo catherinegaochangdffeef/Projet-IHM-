@@ -1,7 +1,7 @@
 inherited f_releve_list: Tf_releve_list
-  Left = 643
+  Left = 243
   Height = 358
-  Top = 590
+  Top = 578
   Width = 476
   Caption = 'f_releve_list'
   ClientHeight = 358
