@@ -1,7 +1,7 @@
 object f_gabarit: Tf_gabarit
-  Left = 515
+  Left = 235
   Height = 800
-  Top = 208
+  Top = 107
   Width = 1200
   Caption = 'Gestion des inscriptions'
   ClientHeight = 775
@@ -1805,7 +1805,7 @@ object f_gabarit: Tf_gabarit
     ParentColor = False
     ParentFont = False
     TabOrder = 3
-    object Label1: TLabel
+    object t_bienvenue: TLabel
       Left = 31
       Height = 653
       Top = 31

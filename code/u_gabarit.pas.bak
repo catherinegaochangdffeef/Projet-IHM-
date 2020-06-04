@@ -31,7 +31,6 @@ type
     pnl_info: TPanel;
     procedure FormShow(Sender: TObject);
     procedure item_quitterClick(Sender: TObject);
-
     procedure mnu_item_Click(Sender: TObject);
     procedure choix_item_liste;
   private

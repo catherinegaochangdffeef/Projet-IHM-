@@ -23,7 +23,7 @@ type
     item_statistiques: TMenuItem;
     item_archive_n2: TMenuItem;
     item_archive_n1: TMenuItem;
-    Label1: TLabel;
+    t_bienvenue: TLabel;
     mnu_main: TMainMenu;
     pnl_ariane: TPanel;
     pnl_selection: TPanel;
