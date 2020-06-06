@@ -50,7 +50,7 @@ implementation
 
 {$R *.lfm}
 
-uses u_feuille_style;
+uses u_feuille_style, u_list_inscrit, u_modele;
 var
   pnl_actif : TPanel;
 { Tf_select_inscrit }

@@ -48,7 +48,7 @@ implementation
 
 { Tf_gabarit }
 
-Uses  u_feuille_style, u_list_inscrit, u_select_inscrit, u_detail_inscrit;
+Uses  u_feuille_style, u_list_inscrit, u_select_inscrit, u_detail_inscrit, u_modele;
 
 
 procedure Tf_gabarit.mnu_item_Click(Sender: TObject);
@@ -94,12 +94,14 @@ begin
    style.panel_defaut    (pnl_info);
    f_gabarit.width := 1200;
    f_gabarit.height :=  800;
-   pnl_ariane.caption:= ' >' + item_accueil.caption
+   pnl_ariane.caption:= ' >' + item_accueil.caption;
+   modele.open;
 end;
 
 
 procedure Tf_gabarit.item_quitterClick(Sender: TObject);
 begin
+   modele.close;
    close;
 end;
 
