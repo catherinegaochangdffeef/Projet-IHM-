@@ -17,7 +17,7 @@ type
     btn_annuler: TButton;
     btn_retour: TButton;
     cbx_civ: TComboBox;
-    cbx_filiere: TComboBox;
+    edt_filiere: TEdit;
     edt_telephone: TEdit;
     edt_portable: TEdit;
     edt_mel: TEdit;
@@ -71,17 +71,20 @@ type
     procedure edt_prenomExit(Sender: TObject);
     procedure edt_telephoneExit(Sender: TObject);
     procedure edt_villeExit(Sender: TObject);
+    procedure edt_filiereExit(Sender: TObject);
     procedure init ( idinf : string; affi : boolean);
     procedure detail   ( idinf : string);
     procedure edit      ( idinf : string);
     procedure add;
     procedure delete  ( idinf : string);
-    procedure  edt_Enter (Sender : TObject );
+    procedure edt_Enter (Sender : TObject );
 
   private
     { private declarations }
     procedure affi_page;
     function  affi_erreur_saisie     (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
+    procedure affi_lib_court(num : string);
+    procedure affi_lib_milong(num : string);
   public
     { public declarations }
   end;
@@ -93,15 +96,15 @@ implementation
 
 {$R *.lfm}
 
- uses u_feuille_style, u_list_inscrit, u_releve_list;
+ uses u_feuille_style, u_list_inscrit, u_releve_list, u_modele, u_loaddataset;
 { Tf_detail_inscrit }
 Var
    oldvaleur  : string;	// utilisée dans la modification pour comparer l’ancienne valeur avec la saisie
-   id  : string;	// variable active dans toute l'unité, contenant l'id infraction affichée
+   id  : string;	// variable active dans toute l'unité, contenant l'id inscription affichée
 
 procedure	Tf_detail_inscrit.Init   ( idinf : string;	affi : boolean);
-//  ajout nouvelle infraction : id est vide
-// affichage détail d'une infraction : affi est vrai sinon affi est faux
+//  ajout nouvelle inscription : id est vide
+// affichage détail d'une inscription : affi est vrai sinon affi est faux
 begin
    style.panel_travail	(pnl_titre);
    style.panel_travail	(pnl_btn);
@@ -162,14 +165,15 @@ begin
    edt_portable.clear;
    edt_portable.ReadOnly	:=affi;
 
-// initialisation commune
-   cbx_filiere.ReadOnly	:=affi;
+// initialisation filiere
+   edt_filiere.clear;
+   edt_filiere.ReadOnly	:=affi;
    lbl_filiere_erreur.caption    :=  ' ' ;
 
 //initialisation boutons
    btn_retour.visible	:=affi;  // visible quand affichage détail
-   btn_valider.visible	:=NOT  affi;    // visible quand ajout/modification infraction
-   btn_annuler.visible	:=NOT  affi;    // visible quand ajout/modification infraction
+   btn_valider.visible	:=NOT  affi;    // visible quand ajout/modification inscription
+   btn_annuler.visible	:=NOT  affi;    // visible quand ajout/modification inscription
 
 // initialisation relevé
    f_releve_list.borderstyle  := bsNone;
@@ -181,7 +185,7 @@ begin
    show;
 
    id  := idinf;
-   IF  NOT  ( id = '')   // affichage/modification infraction
+   IF  NOT  ( id = '')   // affichage/modification inscription
    THEN  affi_page;
 
 end;
@@ -199,15 +203,26 @@ begin
 end;
 
 procedure	Tf_detail_inscrit.affi_page;
+var
+   flux:TLoadDataSet;
 begin
-// affichage des données de la base, complété par la suite
-end;
+   flux   := modele.inscrit_num(id);
+   flux.read;
+   edt_num.text	                    := flux.Get('id_etu');
+   edt_nom.text	                    := flux.Get('nom');
+   edt_prenom.text                  := flux.Get('prenom');
+   edt_adresse.text	            := flux.Get('adresse');
+   edt_cp.text	                    := flux.Get('cp');
+   edt_ville.text	            := flux.Get('ville');
+   edt_telephone.text	            := flux.Get('telephone');
+   edt_portable.text	            := flux.Get('portable');
+   edt_mel.text	                    := flux.Get('mel');
+   IF flux.Get('civ')='M' THEN cbx_civ.ItemIndex:=0
+   ELSE IF flux.Get('civ')='Mme' THEN cbx_civ.ItemIndex:=1
+   ELSE begin cbx_civ.ItemIndex:=-1 ;
+   end;
+   flux.destroy;
 
-procedure	Tf_detail_inscrit.detail (idinf : string);
-begin
-   init (idinf, true);    // mode affichage
-   pnl_titre.caption	:= 'Détail d''une inscription';
-   btn_retour.setFocus;
 end;
 
 procedure	Tf_detail_inscrit.edit (idinf : string);
@@ -295,5 +310,9 @@ begin
    edt_ville.text := TRIM(edt_ville.text);
 end;
 
+procedure Tf_detail_inscrit.edt_filiereExit(Sender: TObject);
+begin
+   edt_filiere.text := TRIM(edt_filiere.text);
+end;
 end.
 

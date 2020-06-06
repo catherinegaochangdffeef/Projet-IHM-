@@ -16,6 +16,10 @@ Tmodele = class(TMySQL)
    function  inscrit_liste_tous : TLoadDataSet;
    function  inscrit_liste_filiere (code : string) : TLoadDataSet;
    function  inscrit_liste_etudiant (id ,nom : string) : TLoadDataSet;
+   function  inscrit_num (num : string) : TLoadDataSet;
+   function  inscrit_lib_filiere (num : string) : string;
+   function  inscrit_lib_court (num : string) : string;
+   function  inscrit_lib_milong (num : string) : string;
    procedure close;
 end;
 
@@ -50,6 +54,26 @@ end;
 function Tmodele.inscrit_liste_filiere (code : string ) : TLoadDataSet;
 begin
       result := load('sp_inscrit_liste_filiere',[code]);
+end;
+
+function Tmodele.inscrit_num (num : string) : TLoadDataSet;
+begin
+     result := load('sp_inscrit_num',[num]);
+end;
+
+function Tmodele.inscrit_lib_filiere (num : string) : string;
+begin
+     load('sp_inscrit_lib_filiere',[num], result);
+end;
+
+function Tmodele.inscrit_lib_court (num : string) : string;
+begin
+     load('sp_inscrit_lib_court',[num], result);
+end;
+
+function Tmodele.inscrit_lib_milong (num : string) : string;
+begin
+     load('sp_inscrit_lib_milong',[num], result);
 end;
 
 begin
