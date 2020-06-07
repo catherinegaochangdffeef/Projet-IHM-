@@ -17,8 +17,6 @@ Tmodele = class(TMySQL)
    function  inscrit_liste_filiere (code : string) : TLoadDataSet;
    function  inscrit_liste_etudiant (id ,nom : string) : TLoadDataSet;
    function  inscrit_num (num : string) : TLoadDataSet;
-   function  inscrit_lib_court (num : string) : string;
-   function  inscrit_lib_milong (num : string) : string;
    procedure close;
 end;
 

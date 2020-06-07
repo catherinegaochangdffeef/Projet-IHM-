@@ -83,8 +83,6 @@ type
     { private declarations }
     procedure affi_page;
     function  affi_erreur_saisie     (erreur : string; lbl : TLabel; edt : TEdit) : boolean;
-    procedure affi_lib_court(num : string);
-    procedure affi_lib_milong(num : string);
   public
     { public declarations }
   end;
@@ -217,37 +215,16 @@ begin
    edt_telephone.text	            := flux.Get('telephone');
    edt_portable.text	            := flux.Get('portable');
    edt_mel.text	                    := flux.Get('mel');
+   edt_filiere.text	            := flux.Get('code_fil');
+   lbl_filiere_court.Caption	    := flux.Get('libcourt_fil');
+   lbl_filiere_long.Caption	    := flux.Get('libmilong_fil');
    IF flux.Get('civ')='M' THEN cbx_civ.ItemIndex:=0
    ELSE IF flux.Get('civ')='Mme' THEN cbx_civ.ItemIndex:=1
    ELSE begin cbx_civ.ItemIndex:=-1 ;
    end;
    flux.destroy;
-
-   affi_lib_court	(edt_filiere.text);
-   affi_lib_milong	(edt_filiere.text);
 end;
 
-procedure       Tf_detail_inscrit.affi_lib_court(num : string);
-begin
-   lbl_filiere_court.Caption:='';
-   if num=''
-   then lbl_filiere_court.Hide
-   else begin
-   lbl_filiere_court.Visible:=true;
-   lbl_filiere_court.Caption:=modele.inscrit_lib_court(num);
-   end;
-end;
-
-procedure       Tf_detail_inscrit.affi_lib_milong(num : string);
-begin
-   lbl_filiere_long.Caption:='';
-   if num=''
-   then lbl_filiere_long.Hide
-   else begin
-   lbl_filiere_long.Visible:=true;
-   lbl_filiere_long.Caption:=modele.inscrit_lib_milong(num);
-   end;
-end;
 procedure	Tf_detail_inscrit.detail (idinf : string);
 begin
    init (idinf, true);    // mode affichage
