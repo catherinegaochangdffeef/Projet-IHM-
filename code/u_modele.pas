@@ -17,6 +17,7 @@ Tmodele = class(TMySQL)
    function  inscrit_liste_filiere (code : string) : TLoadDataSet;
    function  inscrit_liste_etudiant (id ,nom : string) : TLoadDataSet;
    function  inscrit_num (num : string) : TLoadDataSet;
+   function  inscrit_notes (num : string) : TLoadDataSet;
    procedure close;
 end;
 
@@ -58,6 +59,10 @@ begin
      result := load('sp_inscrit_num',[num]);
 end;
 
+function Tmodele.inscrit_notes (num : string) : TLoadDataSet;
+begin
+     result := load('sp_inscrit_notes',[num]);
+end;
 begin
      modele := TModele.Create;
 end.

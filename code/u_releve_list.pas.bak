@@ -13,6 +13,8 @@ type
 
   Tf_releve_list = class(TF_liste)
      procedure Init (affi : boolean);
+     procedure affi_moy_total;
+     procedure affi_moy_eleve;
   private
     { private declarations }
   public

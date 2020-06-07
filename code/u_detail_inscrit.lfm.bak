@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 628
+  Left = 690
   Height = 722
-  Top = 192
+  Top = 209
   Width = 920
   Caption = 'f_detail_inscrit'
   ClientHeight = 722
@@ -404,19 +404,11 @@ object f_detail_inscrit: Tf_detail_inscrit
         TabOrder = 1
         object lbl_releve: TLabel
           Left = 8
-          Height = 15
+          Height = 24
           Top = 0
-          Width = 140
+          Width = 490
           AutoSize = False
           Caption = 'Relevé de notes'
-          ParentColor = False
-        end
-        object lbl_moyennes: TLabel
-          Left = 272
-          Height = 15
-          Top = 0
-          Width = 73
-          Caption = 'lbl_moyennes'
           ParentColor = False
         end
       end

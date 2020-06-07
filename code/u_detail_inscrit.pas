@@ -27,7 +27,6 @@ type
     edt_num: TEdit;
     edt_nom: TEdit;
     edt_prenom: TEdit;
-    lbl_moyennes: TLabel;
     lbl_releve: TLabel;
     lbl_filiere_court: TLabel;
     lbl_filiere_long: TLabel;
@@ -129,6 +128,7 @@ begin
         style.panel_travail (pnl_releve);
 	style.panel_travail (pnl_releve_list);
 		style.label_titre  (lbl_filiere);
+                style.label_titre  (lbl_releve);
 
 // initialisation identification
    edt_num.clear;
@@ -179,6 +179,7 @@ begin
    f_releve_list.align  := alClient;
    f_releve_list.init(affi);
    f_releve_list.show;
+   f_releve_list.affi_data(modele.inscrit_notes(idinf));
 
    show;
 
