@@ -8,7 +8,7 @@
       <Unit0>
         <Filename Value="tp_projet.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="71"/>
       </Unit0>
       <Unit1>
         <Filename Value="u_gabarit.pas"/>
@@ -18,7 +18,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="2"/>
         <CursorPos X="17" Y="104"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -30,7 +30,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="55"/>
         <CursorPos X="91" Y="97"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -43,7 +43,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="35"/>
         <CursorPos X="39" Y="46"/>
-        <UsageCount Value="44"/>
+        <UsageCount Value="45"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -54,9 +54,9 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="167"/>
-        <CursorPos X="52" Y="177"/>
-        <UsageCount Value="43"/>
+        <TopLine Value="246"/>
+        <CursorPos X="40" Y="258"/>
+        <UsageCount Value="44"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -69,7 +69,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="15"/>
         <CursorPos X="35" Y="36"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
@@ -77,9 +77,9 @@
         <Filename Value="u_modele.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="4"/>
-        <CursorPos X="16" Y="67"/>
-        <UsageCount Value="32"/>
+        <TopLine Value="43"/>
+        <CursorPos X="47" Y="21"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -108,7 +108,7 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit9>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="u_modele.pas"/>
         <Caret Line="23" Column="22" TopLine="9"/>
@@ -225,6 +225,10 @@
         <Filename Value="u_releve_list.pas"/>
         <Caret Line="38" Column="34"/>
       </Position29>
+      <Position30>
+        <Filename Value="u_detail_inscrit.pas"/>
+        <Caret Line="177" Column="52" TopLine="167"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

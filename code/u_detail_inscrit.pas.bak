@@ -174,12 +174,12 @@ begin
    btn_annuler.visible	:=NOT  affi;    // visible quand ajout/modification inscription
 
 // initialisation relevé
-   f_releve_list.affi_data(modele.inscrit_notes(idinf));
    f_releve_list.borderstyle  := bsNone;
    f_releve_list.parent  := pnl_releve_list;
    f_releve_list.align  := alClient;
    f_releve_list.init(affi);
    f_releve_list.show;
+   f_releve_list.affi_data(modele.inscrit_notes(idinf));
 
    show;
 
@@ -254,7 +254,9 @@ begin
 	,mtConfirmation, [mbYes,mbNo], 0, mbNo) = mrYes
    THEN  BEGIN
           // suppression dans la base, complété par la suite
-               f_list_inscrit.line_delete;
+          modele.inscrit_notes_delete(idinf);
+          modele.inscrit_delete (id_inf);
+          f_list_inscrit.line_delete;
    END;
 end;
 

@@ -254,7 +254,9 @@ begin
 	,mtConfirmation, [mbYes,mbNo], 0, mbNo) = mrYes
    THEN  BEGIN
           // suppression dans la base, complété par la suite
-               f_list_inscrit.line_delete;
+          modele.inscrit_notes_delete(idinf);
+          modele.inscrit_delete (idinf);
+          f_list_inscrit.line_delete;
    END;
 end;
 

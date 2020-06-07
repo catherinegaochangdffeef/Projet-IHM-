@@ -18,6 +18,10 @@ Tmodele = class(TMySQL)
    function  inscrit_liste_etudiant (id ,nom : string) : TLoadDataSet;
    function  inscrit_num (num : string) : TLoadDataSet;
    function  inscrit_notes (num : string) : TLoadDataSet;
+   procedure inscrit_delete (id_inf : string);
+   procedure inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
+   procedure inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);
+   procedure inscrit_notes_delete (id_inf : string);
    procedure close;
 end;
 
@@ -57,6 +61,31 @@ end;
 function Tmodele.inscrit_num (num : string) : TLoadDataSet;
 begin
      result := load('sp_inscrit_num',[num]);
+end;
+
+function Tmodele.inscrit_notes (num : string) : TLoadDataSet;
+begin
+     result := load('sp_inscrit_notes',[num]);
+end;
+
+procedure Tmodele.inscrit_delete (id_inf : string);
+begin
+     exec('sp_inscrit_delete',[id_inf]);
+end;
+
+procedure Tmodele.inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
+begin
+     exec('sp_inscrit_insert',[id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil]);
+end;
+
+procedure Tmodele.inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);
+begin
+     exec('sp_inscrit_insert',[id],[civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil]);
+end;
+
+procedure Tmodele.inscrit_notes_delete (id_inf : string);
+begin
+     exec('sp_inscrit_notes_delete',[id_inf]);
 end;
 
 begin
