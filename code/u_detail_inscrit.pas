@@ -330,8 +330,8 @@ begin
     saisie := edt_filiere.text;
     if  saisie = ''  then  erreur := 'Le code filière doit être rempli.'
     else  begin
-    flux   := modele.recherche_filiere(saisie);
-    ch := flux.Get('code_fil');
+
+    ch := modele.recherche_filiere(saisie);
     if  ch = ''  then erreur := 'Code filière inexistant.';
     end;
     valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, edt_filiere)  AND  valide;

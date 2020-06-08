@@ -72,7 +72,9 @@ begin
 else if  pnl_filiere_edit.visible  then
      f_list_inscrit.affi_data(modele.inscrit_liste_filiere(edt_code.text))
 else if  pnl_etudiant_edit.visible  then
+     if edt_num.text<>'' then
      f_list_inscrit.affi_data(modele.inscrit_liste_etudiant(edt_num.text,edt_nom.text))
+     else f_list_inscrit.affi_data(modele.inscrit_liste_etudiant('0',edt_nom.text))
 end;
 
 procedure   Tf_select_inscrit.pnl_choix_btnClick (Sender : TObject);
