@@ -1,7 +1,7 @@
 object f_detail_inscrit: Tf_detail_inscrit
-  Left = 690
+  Left = -13
   Height = 722
-  Top = 209
+  Top = 189
   Width = 920
   Caption = 'f_detail_inscrit'
   ClientHeight = 722
@@ -31,6 +31,7 @@ object f_detail_inscrit: Tf_detail_inscrit
       Top = 16
       Width = 88
       Caption = 'Valider'
+      OnClick = btn_validerClick
       TabOrder = 0
     end
     object btn_annuler: TButton

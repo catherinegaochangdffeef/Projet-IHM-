@@ -18,6 +18,7 @@ Tmodele = class(TMySQL)
    function  inscrit_liste_etudiant (id ,nom : string) : TLoadDataSet;
    function  inscrit_num (num : string) : TLoadDataSet;
    function  inscrit_notes (num : string) : TLoadDataSet;
+   function  recherche_filiere (id_fil : string) : TLoadDataSet;
    procedure inscrit_delete (id_inf : string);
    procedure inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
    procedure inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);
@@ -68,6 +69,11 @@ begin
      result := load('sp_inscrit_notes',[num]);
 end;
 
+function Tmodele.recherche_filiere (id_fil : string) : TLoadDataSet;
+begin
+     result := load('sp_recherche_filiere',[id_fil]);
+end;
+
 procedure Tmodele.inscrit_delete (id_inf : string);
 begin
      exec('sp_inscrit_delete',[id_inf]);
@@ -80,7 +86,7 @@ end;
 
 procedure Tmodele.inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);
 begin
-     exec('sp_inscrit_insert',[id],[civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil]);
+     exec('sp_inscrit_update',[id],[civ, nom, prenom, adresse, cp, ville, portable, telephone, mel]);
 end;
 
 procedure Tmodele.inscrit_notes_delete (id_inf : string);

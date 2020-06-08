@@ -61,6 +61,7 @@ type
     pnl_titre: TPanel;
     procedure btn_annulerClick(Sender: TObject);
     procedure btn_retourClick(Sender: TObject);
+    procedure btn_validerClick(Sender: TObject);
     procedure edt_adresseExit(Sender: TObject);
     procedure edt_cpExit(Sender: TObject);
     procedure edt_melExit(Sender: TObject);
@@ -255,7 +256,7 @@ begin
    THEN  BEGIN
           // suppression dans la base, complété par la suite
           modele.inscrit_notes_delete(idinf);
-          modele.inscrit_delete (id_inf);
+          modele.inscrit_delete (idinf);
           f_list_inscrit.line_delete;
    END;
 end;
@@ -273,6 +274,96 @@ end;
 procedure Tf_detail_inscrit.btn_retourClick(Sender: TObject);
 begin
      close;
+end;
+
+procedure Tf_detail_inscrit.btn_validerClick(Sender: TObject);
+  var
+    flux	     : TLoadDataSet;
+    saisie, erreur, ch	 : string;
+    i 	     : integer;
+    valide  : boolean;
+begin
+    valide := true;
+
+    erreur := '';
+    saisie := edt_nom.text;
+    if  saisie = ''  then  erreur := 'Le nom doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_nom_erreur, edt_nom)  AND  valide;
+
+    erreur := '';
+    saisie := edt_prenom.text;
+    if  saisie = ''  then  erreur := 'Le prenom doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_prenom_erreur, edt_prenom)  AND  valide;
+
+    erreur := '';
+    saisie := edt_adresse.text;
+    if  saisie = ''  then  erreur := 'L`adresse doit être remplie.';
+    valide := affi_erreur_saisie (erreur, lbl_adresse_erreur, edt_adresse)  AND  valide;
+
+    erreur := '';
+    saisie := edt_cp.text;
+    if  saisie = ''  then  erreur := 'Le CP doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_cp_erreur, edt_cp)  AND  valide;
+
+    erreur := '';
+    saisie := edt_ville.text;
+    if  saisie = ''  then  erreur := 'La ville doit être remplie.';
+    valide := affi_erreur_saisie (erreur, lbl_ville_erreur, edt_ville)  AND  valide;
+    erreur := '';
+
+    erreur := '';
+    saisie := edt_telephone.text;
+    if  saisie = ''  then  erreur := 'Le téléphone doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_telephone)  AND  valide;
+
+    erreur := '';
+    saisie := edt_portable.text;
+    if  saisie = ''  then  erreur := 'Le portable doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_telephone_erreur, edt_portable)  AND  valide;
+
+    erreur := '';
+    saisie := edt_mel.text;
+    if  saisie = ''  then  erreur := 'Le mel doit être rempli.';
+    valide := affi_erreur_saisie (erreur, lbl_mel_erreur, edt_mel)  AND  valide;
+
+    erreur := '';
+    saisie := edt_filiere.text;
+    if  saisie = ''  then  erreur := 'Le code filière doit être rempli.'
+    else  begin
+          flux   := modele.recherche_filiere(saisie);
+          flux.read;
+             ch := flux.Get('code_fil');
+          flux.destroy;
+	  if  ch = ''  then erreur := 'Code filière inexistant.';
+    end;
+    valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, edt_filiere)  AND  valide;
+
+    if  id = ''
+    then begin
+	 erreur := '';
+	 saisie := edt_num.text;
+	 if  saisie = ''   then  erreur := 'Le numéro doit être rempli.'
+	 else begin
+	      flux := modele.inscrit_liste_etudiant(saisie, '');
+	      if  NOT  flux.endOf
+	      then  erreur := 'Le numéro existe déjà';
+	 end;
+	 valide := affi_erreur_saisie (erreur, lbl_num_erreur, edt_num)  AND  valide;
+    end;
+
+    if  NOT  valide
+    then  messagedlg ('Erreur enregistrement Inscription', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
+    else  begin
+         if  id =''
+         then  modele.inscrit_insert (edt_num.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_cp.text, edt_ville.text, edt_telephone.text, edt_portable.text, edt_mel.text, edt_filiere.text)
+         else  begin
+       	modele.inscrit_update (id       , edt_nom.text, edt_prenom.text, edt_adresse.text, edt_cp.text, edt_ville.text, edt_telephone.text, edt_portable.text)
+         end;
+
+	  if id='' then f_list_inscrit.line_add(modele.inscrit_liste_etudiant(edt_num.text,''))
+   	  else f_list_inscrit.line_edit(modele.inscrit_liste_etudiant(id,''));
+   	  close;
+    end;
 end;
 
 procedure Tf_detail_inscrit.edt_adresseExit(Sender: TObject);
