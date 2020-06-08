@@ -20,7 +20,7 @@ Tmodele = class(TMySQL)
    function  inscrit_notes (num : string) : TLoadDataSet;
    function  recherche_filiere (code_fil : string) : String;
    procedure inscrit_delete (id_inf : string);
-   procedure inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
+   procedure inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, code_fil : string);
    procedure inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);
    procedure inscrit_notes_delete (id_inf : string);
    procedure close;
@@ -79,9 +79,9 @@ begin
      exec('sp_inscrit_delete',[id_inf]);
 end;
 
-procedure Tmodele.inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
+procedure Tmodele.inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, code_fil : string);
 begin
-     exec('sp_inscrit_insert',[id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil]);
+     exec('sp_inscrit_insert',[id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, code_fil]);
 end;
 
 procedure Tmodele.inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);

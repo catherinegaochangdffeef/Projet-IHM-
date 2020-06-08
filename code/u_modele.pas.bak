@@ -71,7 +71,7 @@ end;
 
 function Tmodele.recherche_filiere (code_fil : string) : String;
 begin
-     load('sp_recherche_filiere',[code_fil], result);
+     load('sp_inscrit_recherche_filiere',[code_fil], result);
 end;
 
 procedure Tmodele.inscrit_delete (id_inf : string);
@@ -79,9 +79,9 @@ begin
      exec('sp_inscrit_delete',[id_inf]);
 end;
 
-procedure Tmodele.inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
+procedure Tmodele.inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, code_fil : string);
 begin
-     exec('sp_inscrit_insert',[id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil]);
+     exec('sp_inscrit_insert',[id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, code_fil]);
 end;
 
 procedure Tmodele.inscrit_update (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel : string);
