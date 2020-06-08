@@ -79,7 +79,7 @@ begin
      exec('sp_inscrit_delete',[id_inf]);
 end;
 
-procedure Tmodele.inscrit_insert (id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil : string);
+procedure Tmodele.inscrit_insert (v_id, v_civ, v_nom, v_prenom, v_adresse, v_cp, v_ville, v_portable, v_telephone, v_mel, v_id_fil : string);
 begin
      exec('sp_inscrit_insert',[id, civ, nom, prenom, adresse, cp, ville, portable, telephone, mel, id_fil]);
 end;

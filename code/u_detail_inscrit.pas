@@ -330,11 +330,9 @@ begin
     saisie := edt_filiere.text;
     if  saisie = ''  then  erreur := 'Le code filière doit être rempli.'
     else  begin
-          flux   := modele.recherche_filiere(saisie);
-          flux.read;
-             ch := flux.Get('code_fil');
-          flux.destroy;
-	  if  ch = ''  then erreur := 'Code filière inexistant.';
+    flux   := modele.recherche_filiere(saisie);
+    ch := flux.Get('code_fil');
+    if  ch = ''  then erreur := 'Code filière inexistant.';
     end;
     valide := affi_erreur_saisie (erreur, lbl_filiere_erreur, edt_filiere)  AND  valide;
 
@@ -355,9 +353,9 @@ begin
     then  messagedlg ('Erreur enregistrement Inscription', 'La saisie est incorrecte.' +#13 +'Corrigez la saisie et validez à nouveau.', mtWarning, [mbOk], 0)
     else  begin
          if  id =''
-         then  modele.inscrit_insert (edt_num.text, edt_nom.text, edt_prenom.text, edt_adresse.text, edt_cp.text, edt_ville.text, edt_telephone.text, edt_portable.text, edt_mel.text, edt_filiere.text)
+         then  modele.inscrit_insert (edt_num.Text, cbx_civ.Items[cbx_civ.ItemIndex], edt_nom.Text, edt_prenom.Text, edt_adresse.Text, edt_cp.Text, edt_ville.Text, edt_telephone.Text, edt_portable.Text, edt_mel.Text, edt_filiere.Text)
          else  begin
-       	       modele.inscrit_update (id       , edt_nom.text, edt_prenom.text, edt_adresse.text, edt_cp.text, edt_ville.text, edt_telephone.text, edt_portable.text)
+       	       modele.inscrit_update (id, cbx_civ.Items[cbx_civ.ItemIndex], edt_nom.text, edt_prenom.text, edt_adresse.text, edt_cp.text, edt_ville.text, edt_telephone.text, edt_portable.text, edt_mel.Text)
          end;
 
 	  if id='' then f_list_inscrit.line_add(modele.inscrit_liste_etudiant(edt_num.text,''))
